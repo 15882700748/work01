@@ -5,10 +5,20 @@ import router from './router'
 import store from './store'
 import './plugins/element.js'
 
-Vue.config.productionTip = false
+//elementui
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
+//axios请求
+import axios from 'axios'
+window.axios = axios
 
+Vue.config.productionTip = false
+Vue.use(ElementUI)
 new Vue({
   router,
   store,
+  components: {
+    App
+  },
   render: h => h(App)
 }).$mount('#app')
