@@ -789,49 +789,49 @@
                         </el-tab-pane>
                         <el-tab-pane name="3" label="问诊">
                             <el-row>
-                                <el-col>
-                                    <el-tabs value="问诊信息" type="border-card" >
-                                        <el-tab-pane label="问诊信息" name="问诊信息">
-                                            <el-form  size="small" label-position="right"    class="formRow" style="min-height:100px">
-                                                <el-row class="formRow">
-                                                    <el-col :span="22" :offset="1" >
-                                                        <el-form-item>
+                            <el-col>
+                                <el-tabs value="问诊信息" type="border-card" >
+                                    <el-tab-pane label="问诊信息" name="问诊信息">
+                                        <el-form  size="small" label-position="right"    class="formRow" style="min-height:100px">
+                                            <el-row class="formRow">
+                                                <el-col :span="22" :offset="1" >
+                                                    <el-form-item>
                                                             <el-input  value="诊断" type="textarea" :autosize="{minRows:8,MaxRows:12}" aria-placeholder="诊断"></el-input>
-                                                        </el-form-item>
-                                                    </el-col>
-                                                </el-row>
-                                                <el-row class="formRow">
-                                                    <el-col :span="22" :offset="1" >
-                                                        <el-form-item>
-                                                            <el-input  value="临床" type="textarea" :autosize="{minRows:8,MaxRows:12}" aria-placeholder="临床"></el-input>
-                                                        </el-form-item>
-                                                    </el-col>
-                                                </el-row>
-                                                <el-row class="formRow">
-                                                    <el-col :span="22" :offset="1" >
-                                                        <el-form-item>
-                                                            <el-input  value="意见" type="textarea" :autosize="{minRows:8,MaxRows:12}" aria-placeholder="意见"></el-input>
-                                                        </el-form-item>
-                                                    </el-col>
-                                                </el-row>
-                                                <el-row class="formRow">
-                                                    <el-col :span="8" :offset="4">
-                                                        <el-form-item>
-                                                            <el-button type="primary">保存信息</el-button>
-                                                        </el-form-item>
-                                                    </el-col>
-                                                    <el-col :span="8" >
-                                                        <el-form-item>
-                                                            <el-button >重置</el-button>
-                                                        </el-form-item>
-                                                    </el-col>
-                                                </el-row>
-                                            </el-form>
-                                        </el-tab-pane>
-                                    </el-tabs>
+                                                    </el-form-item>
+                                                </el-col>
+                                            </el-row>
+                                            <el-row class="formRow">
+                                                <el-col :span="22" :offset="1" >
+                                                    <el-form-item>
+                                                        <el-input  value="临床" type="textarea" :autosize="{minRows:8,MaxRows:12}" aria-placeholder="临床"></el-input>
+                                                    </el-form-item>
+                                                </el-col>
+                                            </el-row>
+                                            <el-row class="formRow">
+                                                <el-col :span="22" :offset="1" >
+                                                    <el-form-item>
+                                                        <el-input  value="意见" type="textarea" :autosize="{minRows:8,MaxRows:12}" aria-placeholder="意见"></el-input>
+                                                    </el-form-item>
+                                                </el-col>
+                                            </el-row>
+                                            <el-row class="formRow">
+                                                <el-col :span="8" :offset="4">
+                                                    <el-form-item>
+                                                        <el-button type="primary">保存信息</el-button>
+                                                    </el-form-item>
+                                                </el-col>
+                                                <el-col :span="8" >
+                                                    <el-form-item>
+                                                        <el-button >重置</el-button>
+                                                    </el-form-item>
+                                                </el-col>
+                                            </el-row>
+                                        </el-form>
+                                    </el-tab-pane>
+                                </el-tabs>
 
-                                </el-col>
-                            </el-row>
+                            </el-col>
+                        </el-row>
                             <el-divider></el-divider>
                             <el-row>
                                 <el-col>
