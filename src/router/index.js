@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import PutOnRecord from '../views/patient/PutOnRecord'
 import doctor from '../views/highLevelDoctor/doctor'
+import CloudPharmacy from '../views/cloudPharmacy/CloudPharmacy'
 
 Vue.use(VueRouter)
 
@@ -29,6 +30,11 @@ const routes = [
 		path: '/doctor',
 		name: 'doctor',
 		component: doctor
+    },
+    {
+      path: '/cloudPharmacy',
+      name: 'cloudPharmacy',
+      component: CloudPharmacy
     }
 ]
 
