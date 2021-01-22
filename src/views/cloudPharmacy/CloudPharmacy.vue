@@ -116,7 +116,7 @@
                                 </el-row>
                                 <el-row style="margin-top: 50px">
                                     <el-col :span="4" :offset="4">
-                                        <span>村医/下级医院</span>
+                                        <span>首诊医生</span>
                                     </el-col>
                                     <el-col :span="16">
                                         <el-form size="small" label-position="right" label-width="40px">
@@ -244,8 +244,8 @@
                                             </el-row>
                                             <el-row class="formRow">
                                                 <el-col :span="8" :offset="2">
-                                                    <el-form-item label="上级大夫">
-                                                        <el-input disabled="true" value="刘大夫">
+                                                    <el-form-item label="上级医生">
+                                                        <el-input disabled="true" value="刘医生">
                                                         </el-input>
                                                     </el-form-item>
                                                 </el-col>

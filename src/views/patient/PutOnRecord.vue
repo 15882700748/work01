@@ -34,7 +34,7 @@
                                             fit="fit"></el-image>
                                 </el-row>
                                 <el-row>
-                                    姓名：张大夫
+                                    姓名：张医生
                                 </el-row>
                                 <el-row>
                                     机构：省二医院
@@ -56,53 +56,7 @@
                                             fit="fit"></el-image>
                                 </el-row>
                                 <el-row>
-                                    姓名：张大夫
-                                </el-row>
-                                <el-row>
-                                    机构：省二医院
-                                </el-row>
-                                <el-row>
-                                    职称：主任医师
-                                </el-row>
-                                <el-row>
-                                    收费：30元/次
-                                </el-row>
-                            </el-card></el-button>
-                        </el-col>
-                    </el-row>
-                    <el-row class="formRow">
-                        <el-col :span="11">
-                            <el-button ><el-card class="box-card">
-                                <el-row>
-                                    <el-image
-                                            style="width: auto; height: 100px"
-                                            :src="url"
-                                            fit="fit"></el-image>
-                                </el-row>
-                                <el-row>
-                                    姓名：张大夫
-                                </el-row>
-                                <el-row>
-                                    机构：省二医院
-                                </el-row>
-                                <el-row>
-                                    职称：主任医师
-                                </el-row>
-                                <el-row>
-                                    收费：30元/次
-                                </el-row>
-                            </el-card></el-button>
-                        </el-col>
-                        <el-col :span="11">
-                            <el-button ><el-card class="box-card">
-                                <el-row>
-                                    <el-image
-                                            style="width: auto; height: 100px"
-                                            :src="url"
-                                            fit="fit"></el-image>
-                                </el-row>
-                                <el-row>
-                                    姓名：张大夫
+                                    姓名：张医生
                                 </el-row>
                                 <el-row>
                                     机构：省二医院
@@ -126,7 +80,7 @@
                                             fit="fit"></el-image>
                                 </el-row>
                                 <el-row>
-                                    姓名：张大夫
+                                    姓名：张医生
                                 </el-row>
                                 <el-row>
                                     机构：省二医院
@@ -148,7 +102,53 @@
                                             fit="fit"></el-image>
                                 </el-row>
                                 <el-row>
-                                    姓名：张大夫
+                                    姓名：张医生
+                                </el-row>
+                                <el-row>
+                                    机构：省二医院
+                                </el-row>
+                                <el-row>
+                                    职称：主任医师
+                                </el-row>
+                                <el-row>
+                                    收费：30元/次
+                                </el-row>
+                            </el-card></el-button>
+                        </el-col>
+                    </el-row>
+                    <el-row class="formRow">
+                        <el-col :span="11">
+                            <el-button ><el-card class="box-card">
+                                <el-row>
+                                    <el-image
+                                            style="width: auto; height: 100px"
+                                            :src="url"
+                                            fit="fit"></el-image>
+                                </el-row>
+                                <el-row>
+                                    姓名：张医生
+                                </el-row>
+                                <el-row>
+                                    机构：省二医院
+                                </el-row>
+                                <el-row>
+                                    职称：主任医师
+                                </el-row>
+                                <el-row>
+                                    收费：30元/次
+                                </el-row>
+                            </el-card></el-button>
+                        </el-col>
+                        <el-col :span="11">
+                            <el-button ><el-card class="box-card">
+                                <el-row>
+                                    <el-image
+                                            style="width: auto; height: 100px"
+                                            :src="url"
+                                            fit="fit"></el-image>
+                                </el-row>
+                                <el-row>
+                                    姓名：张医生
                                 </el-row>
                                 <el-row>
                                     机构：省二医院
@@ -164,16 +164,37 @@
                     </el-row>
                     <el-row class="formRow">
                         <el-col>
-                            <el-button type="primary">选择远程问诊大夫</el-button>
+                            <el-button type="primary">选择远程问诊医生</el-button>
                         </el-col>
                     </el-row>
                     <el-divider></el-divider>
                     <el-row class="formRow">
                         <el-col :span="12">
-                            <el-link type="primary">上级大夫列表</el-link>
+                            <el-link type="primary">上级医生列表</el-link>
                         </el-col>
                         <el-col :span="12">
                             <el-link type="info">远程问诊</el-link>
+                        </el-col>
+                    </el-row>
+                    <el-divider></el-divider>
+                    <el-row style="margin-top: 40px">
+                        <el-col :span="20" offset="2">
+                            <el-form ref="form2"   label-width="80px" class="formBorder" style="min-height:200px">
+                                <el-row style="margin-top: 40px">
+                                    <el-col :span="20" :offset="2">
+                                        <el-form-item label="首诊医生">
+                                            <el-input value="刘医生"></el-input>
+                                        </el-form-item>
+                                    </el-col>
+                                </el-row>
+                                <el-row class="formRow">
+                                    <el-col :span="20" :offset="2">
+                                        <el-form-item label="服务机构">
+                                            <el-input v-model="orgName" disabled="true" value="二级医院"></el-input>
+                                        </el-form-item>
+                                    </el-col>
+                                </el-row>
+                            </el-form>
                         </el-col>
                     </el-row>
                 </el-aside>
@@ -200,81 +221,280 @@
                         </el-col>
                     </el-row>
                     <el-divider></el-divider>
-                    <el-row style="margin-top: 50px">
+                    <el-row style="margin-top: 40px">
                         <el-col :span="12">
-                            <el-link type="info">上级大夫列表</el-link>
+                            <el-link type="info">上级医生列表</el-link>
                         </el-col>
                         <el-col :span="12">
                             <el-link type="primary">远程问诊</el-link>
                         </el-col>
                     </el-row>
-                </el-aside>
-                <el-aside v-else-if="tabName === '4'" width="500px" class="border minHeight">
-                    <el-row style="margin-top: 20px">
-                        <el-col :span="22" offset="1">
-                            <el-card class="box-card">
-                                <div slot="header" >
-                                    <span>患者信息（档案信息）</span>
-                                </div>
-                                <el-row>
-                                    <el-col>
-                                        <el-form label-width="80px" label-position="right" style="min-height: 010px">
-                                            <el-row class="formRow">
-                                                <el-col :span="10">
-                                                    <el-form-item label="姓名">
-                                                        <el-input disabled="true" value="张三"></el-input>
-                                                    </el-form-item>
-                                                </el-col>
-                                                <el-col :span="10" :offset="2">
-                                                    <el-form-item label="性别">
-                                                        <el-input disabled="true" value="男"></el-input>
-                                                    </el-form-item>
-                                                </el-col>
-                                            </el-row>
-                                            <el-row class="formRow">
-                                                <el-col :span="22" :offset="1">
-                                                    <el-card typeof="card-box">
-                                                        <div slot="header" >
-                                                            <span>患者症状基本信息</span>
-                                                        </div>
-                                                        <el-row>
-                                                            <el-col :span="8">
-                                                                症状1
-                                                            </el-col>
-                                                        </el-row>
-                                                        <el-row>
-                                                            <el-col :span="8">
-                                                                症状2
-                                                            </el-col>
-                                                        </el-row>
-                                                        <el-row>
-                                                            <el-col :span="8">
-                                                                症状3
-                                                            </el-col>
-                                                        </el-row>
-                                                    </el-card>
-                                                </el-col>
-                                            </el-row>
-                                            <el-row style="margin-top: 50px">
-                                                <el-col :span="22">
-                                                    <el-form-item label="村医">
-                                                        <el-input disabled="true" value="李大夫"></el-input>
-                                                    </el-form-item>
-                                                </el-col>
-                                            </el-row>
-                                            <el-row class="formRow">
-                                                <el-col :span="22">
-                                                    <el-form-item label="服务机构">
-                                                        <el-input disabled="true" value="省二医院"></el-input>
-                                                    </el-form-item>
-                                                </el-col>
-                                            </el-row>
-                                        </el-form>
+                    <el-divider></el-divider>
+                    <el-row style="margin-top: 40px">
+                        <el-col :span="20" offset="2">
+                            <el-form ref="form2"   label-width="80px" class="formBorder" style="min-height:200px">
+                                <el-row style="margin-top: 40px">
+                                    <el-col :span="20" :offset="2">
+                                        <el-form-item label="首诊医生">
+                                            <el-input value="刘医生"></el-input>
+                                        </el-form-item>
                                     </el-col>
                                 </el-row>
-                            </el-card>
+                                <el-row class="formRow">
+                                    <el-col :span="20" :offset="2">
+                                        <el-form-item label="服务机构">
+                                            <el-input v-model="orgName" disabled="true" value="二级医院"></el-input>
+                                        </el-form-item>
+                                    </el-col>
+                                </el-row>
+                            </el-form>
                         </el-col>
                     </el-row>
+                </el-aside>
+                <el-aside v-else-if="tabName === '4'" width="500px" class="border minHeight">
+                    <el-row class="formRow">
+                        <el-col>
+                            上级医生列表
+                        </el-col>
+                    </el-row>
+                    <el-row class="formRow">
+                        <el-col :span="11">
+                            <el-button ><el-card class="box-card">
+                                <el-row>
+                                    <el-image
+                                            style="width: auto; height: 100px"
+                                            :src="url"
+                                            fit="fit"></el-image>
+                                </el-row>
+                                <el-row>
+                                    姓名：张医生
+                                </el-row>
+                                <el-row>
+                                    机构：省二医院
+                                </el-row>
+                                <el-row>
+                                    职称：主任医师
+                                </el-row>
+                                <el-row>
+                                    收费：30元/次
+                                </el-row>
+                            </el-card></el-button>
+                        </el-col>
+                        <el-col :span="11">
+                            <el-button ><el-card class="box-card">
+                                <el-row>
+                                    <el-image
+                                            style="width: auto; height: 100px"
+                                            :src="url"
+                                            fit="fit"></el-image>
+                                </el-row>
+                                <el-row>
+                                    姓名：张医生
+                                </el-row>
+                                <el-row>
+                                    机构：省二医院
+                                </el-row>
+                                <el-row>
+                                    职称：主任医师
+                                </el-row>
+                                <el-row>
+                                    收费：30元/次
+                                </el-row>
+                            </el-card></el-button>
+                        </el-col>
+                    </el-row>
+                    <el-row class="formRow">
+                        <el-col :span="11">
+                            <el-button ><el-card class="box-card">
+                                <el-row>
+                                    <el-image
+                                            style="width: auto; height: 100px"
+                                            :src="url"
+                                            fit="fit"></el-image>
+                                </el-row>
+                                <el-row>
+                                    姓名：张医生
+                                </el-row>
+                                <el-row>
+                                    机构：省二医院
+                                </el-row>
+                                <el-row>
+                                    职称：主任医师
+                                </el-row>
+                                <el-row>
+                                    收费：30元/次
+                                </el-row>
+                            </el-card></el-button>
+                        </el-col>
+                        <el-col :span="11">
+                            <el-button ><el-card class="box-card">
+                                <el-row>
+                                    <el-image
+                                            style="width: auto; height: 100px"
+                                            :src="url"
+                                            fit="fit"></el-image>
+                                </el-row>
+                                <el-row>
+                                    姓名：张医生
+                                </el-row>
+                                <el-row>
+                                    机构：省二医院
+                                </el-row>
+                                <el-row>
+                                    职称：主任医师
+                                </el-row>
+                                <el-row>
+                                    收费：30元/次
+                                </el-row>
+                            </el-card></el-button>
+                        </el-col>
+                    </el-row>
+                    <el-row class="formRow">
+                        <el-col :span="11">
+                            <el-button ><el-card class="box-card">
+                                <el-row>
+                                    <el-image
+                                            style="width: auto; height: 100px"
+                                            :src="url"
+                                            fit="fit"></el-image>
+                                </el-row>
+                                <el-row>
+                                    姓名：张医生
+                                </el-row>
+                                <el-row>
+                                    机构：省二医院
+                                </el-row>
+                                <el-row>
+                                    职称：主任医师
+                                </el-row>
+                                <el-row>
+                                    收费：30元/次
+                                </el-row>
+                            </el-card></el-button>
+                        </el-col>
+                        <el-col :span="11">
+                            <el-button ><el-card class="box-card">
+                                <el-row>
+                                    <el-image
+                                            style="width: auto; height: 100px"
+                                            :src="url"
+                                            fit="fit"></el-image>
+                                </el-row>
+                                <el-row>
+                                    姓名：张医生
+                                </el-row>
+                                <el-row>
+                                    机构：省二医院
+                                </el-row>
+                                <el-row>
+                                    职称：主任医师
+                                </el-row>
+                                <el-row>
+                                    收费：30元/次
+                                </el-row>
+                            </el-card></el-button>
+                        </el-col>
+                    </el-row>
+                    <el-row class="formRow">
+                        <el-col>
+                            <el-button type="primary">选择远程问诊医生</el-button>
+                        </el-col>
+                    </el-row>
+                    <el-divider></el-divider>
+                    <el-row class="formRow">
+                        <el-col :span="12">
+                            <el-link type="primary">上级医生列表</el-link>
+                        </el-col>
+                        <el-col :span="12">
+                            <el-link type="info">远程问诊</el-link>
+                        </el-col>
+                    </el-row>
+                    <el-divider></el-divider>
+                    <el-row style="margin-top: 40px">
+                        <el-col :span="20" offset="2">
+                            <el-form ref="form2"   label-width="80px" class="formBorder" style="min-height:200px">
+                                <el-row style="margin-top: 40px">
+                                    <el-col :span="20" :offset="2">
+                                        <el-form-item label="首诊医生">
+                                            <el-input value="刘医生"></el-input>
+                                        </el-form-item>
+                                    </el-col>
+                                </el-row>
+                                <el-row class="formRow">
+                                    <el-col :span="20" :offset="2">
+                                        <el-form-item label="服务机构">
+                                            <el-input v-model="orgName" disabled="true" value="二级医院"></el-input>
+                                        </el-form-item>
+                                    </el-col>
+                                </el-row>
+                            </el-form>
+                        </el-col>
+                    </el-row>
+                    <!--<el-row style="margin-top: 20px">-->
+                        <!--<el-col :span="22" offset="1">-->
+                            <!--<el-card class="box-card">-->
+                                <!--<div slot="header" >-->
+                                    <!--<span>患者信息（档案信息）</span>-->
+                                <!--</div>-->
+                                <!--<el-row>-->
+                                    <!--<el-col>-->
+                                        <!--<el-form label-width="80px" label-position="right" style="min-height: 010px">-->
+                                            <!--<el-row class="formRow">-->
+                                                <!--<el-col :span="10">-->
+                                                    <!--<el-form-item label="姓名">-->
+                                                        <!--<el-input disabled="true" value="张三"></el-input>-->
+                                                    <!--</el-form-item>-->
+                                                <!--</el-col>-->
+                                                <!--<el-col :span="10" :offset="2">-->
+                                                    <!--<el-form-item label="性别">-->
+                                                        <!--<el-input disabled="true" value="男"></el-input>-->
+                                                    <!--</el-form-item>-->
+                                                <!--</el-col>-->
+                                            <!--</el-row>-->
+                                            <!--<el-row class="formRow">-->
+                                                <!--<el-col :span="22" :offset="1">-->
+                                                    <!--<el-card typeof="card-box">-->
+                                                        <!--<div slot="header" >-->
+                                                            <!--<span>患者症状基本信息</span>-->
+                                                        <!--</div>-->
+                                                        <!--<el-row>-->
+                                                            <!--<el-col :span="8">-->
+                                                                <!--症状1-->
+                                                            <!--</el-col>-->
+                                                        <!--</el-row>-->
+                                                        <!--<el-row>-->
+                                                            <!--<el-col :span="8">-->
+                                                                <!--症状2-->
+                                                            <!--</el-col>-->
+                                                        <!--</el-row>-->
+                                                        <!--<el-row>-->
+                                                            <!--<el-col :span="8">-->
+                                                                <!--症状3-->
+                                                            <!--</el-col>-->
+                                                        <!--</el-row>-->
+                                                    <!--</el-card>-->
+                                                <!--</el-col>-->
+                                            <!--</el-row>-->
+                                            <!--<el-row style="margin-top: 50px">-->
+                                                <!--<el-col :span="22">-->
+                                                    <!--<el-form-item label="村医">-->
+                                                        <!--<el-input disabled="true" value="李医生"></el-input>-->
+                                                    <!--</el-form-item>-->
+                                                <!--</el-col>-->
+                                            <!--</el-row>-->
+                                            <!--<el-row class="formRow">-->
+                                                <!--<el-col :span="22">-->
+                                                    <!--<el-form-item label="服务机构">-->
+                                                        <!--<el-input disabled="true" value="省二医院"></el-input>-->
+                                                    <!--</el-form-item>-->
+                                                <!--</el-col>-->
+                                            <!--</el-row>-->
+                                        <!--</el-form>-->
+                                    <!--</el-col>-->
+                                <!--</el-row>-->
+                            <!--</el-card>-->
+                        <!--</el-col>-->
+                    <!--</el-row>-->
                 </el-aside>
                 <el-aside v-else-if="tabName === '5'" width="500px" class="border minHeight">
                     <el-row class="formRow">
@@ -301,7 +521,7 @@
                     <el-divider></el-divider>
                     <el-row style="margin-top: 50px">
                         <el-col :span="12">
-                            <el-link type="info">上级大夫列表</el-link>
+                            <el-link type="info">上级医生列表</el-link>
                         </el-col>
                         <el-col :span="12">
                             <el-link type="primary">远程问诊</el-link>
@@ -333,7 +553,7 @@
                     <el-divider></el-divider>
                     <el-row style="margin-top: 50px">
                         <el-col :span="12">
-                            <el-link type="info">上级大夫列表</el-link>
+                            <el-link type="info">上级医生列表</el-link>
                         </el-col>
                         <el-col :span="12">
                             <el-link type="primary">远程问诊</el-link>
@@ -570,65 +790,21 @@
                                     </el-col>
                                 </el-row>
                             </el-form>
-                            <el-divider></el-divider>
-                            <el-form ref="form2"   label-width="200px" class="formBorder" style="min-height:100px">
-                                <el-row class="formRow">
-                                    <el-col :span="10" >
-                                        <el-form-item label="村医(下家单位医生)">
-                                            <el-input value="刘大夫"></el-input>
-                                        </el-form-item>
-                                    </el-col>
-                                </el-row>
-                                <el-row class="formRow">
-                                    <el-col :span="10" >
-                                        <el-form-item label="服务机构">
-                                            <el-input v-model="orgName" disabled="true" aria-placeholder="二级医院"></el-input>
-                                        </el-form-item>
-                                    </el-col>
-                                </el-row>
-                            </el-form>
                         </el-tab-pane>
                         <el-tab-pane name="2" label="挂号">
-                            <el-row >
-                                <el-col :span="4">患者：<strong>XXX</strong></el-col>
-                                <el-col :span="4">协助者村医：<strong>YYY</strong></el-col>
-                            </el-row>
+                            <!--<el-row >-->
+                                <!--<el-col :span="4">患者：<strong>XXX</strong></el-col>-->
+                                <!--<el-col :span="4">协助者村医：<strong>YYY</strong></el-col>-->
+                            <!--</el-row>-->
                             <el-row class="formRow">
                                 <el-col>
                                     <el-tabs value="费用清单" type="border-card" >
                                         <el-tab-pane label="费用清单" name="费用清单">
                                             <el-form  ref="form" size="small" label-position="right"  label-width="100px" class=" formRow" style="min-height:100px">
                                                 <el-row class="formRow">
-                                                    <el-col :span="4">
+                                                    <el-col :span="4" :offset="8">
                                                         <el-form-item label="挂号费">
-                                                            <el-link type="danger">0.00</el-link>
-                                                        </el-form-item>
-                                                    </el-col>
-                                                    <el-col :span="4">
-                                                        <el-form-item label="诊查费">
-                                                            <el-link type="danger">0.00</el-link>
-                                                        </el-form-item>
-                                                    </el-col>
-                                                    <el-col :span="4">
-                                                        <el-form-item label="工本费">
-                                                            <el-link type="danger">0.00</el-link>
-                                                        </el-form-item>
-                                                    </el-col>
-                                                    <el-col :span="4">
-                                                        <el-form-item label="预约服务费">
-                                                            <el-link type="danger">0.00</el-link>
-                                                        </el-form-item>
-                                                    </el-col>
-                                                    <el-col :span="4">
-                                                        <el-form-item label="总金额">
-                                                            <el-link type="danger">0.00</el-link>
-                                                        </el-form-item>
-                                                    </el-col>
-                                                </el-row>
-                                                <el-row class="formRow">
-                                                    <el-col :span="4" :offset="6">
-                                                        <el-form-item label="">
-                                                            <el-button type="primary"> 预约号</el-button>
+                                                            <el-link type="danger">30.00</el-link>
                                                         </el-form-item>
                                                     </el-col>
                                                 </el-row>
@@ -642,79 +818,80 @@
                                     <el-tabs value="症状信息" type="border-card" >
                                         <el-tab-pane label="症状信息" name="症状信息">
                                             <el-form  ref="form" size="small" label-position="right"  label-width="80px" class=" formRow" style="min-height:600px">
-                                                <el-row class="formRow">
-                                                    <el-col :span="8">
-                                                        <el-form-item label="卡号">
-                                                            <el-input placeholder="请输入卡号" >
-                                                                <template slot="append">
-                                                                    <el-button type="primary">读卡</el-button>
-                                                                </template>
-                                                            </el-input>
-                                                        </el-form-item>
-                                                    </el-col>
-                                                    <el-col :span="14">
-                                                        <el-form-item label="活动时间" required>
-                                                            <el-col :span="11">
-                                                                <el-form-item prop="date1">
-                                                                    <el-date-picker type="date" placeholder="选择日期"  style="width: 100%;"></el-date-picker>
-                                                                </el-form-item>
-                                                            </el-col>
-                                                            <el-col class="line" :span="2">-</el-col>
-                                                            <el-col :span="11">
-                                                                <el-form-item prop="date2">
-                                                                    <el-time-picker placeholder="选择时间"  style="width: 100%;"></el-time-picker>
-                                                                </el-form-item>
-                                                            </el-col>
-                                                        </el-form-item>
-                                                    </el-col>
-                                                </el-row>
-                                                <el-row class="formRow">
-                                                    <el-col :span="8">
-                                                        <el-form-item label="病人姓名">
-                                                            <el-input value="XXX" disabled="true"></el-input>
-                                                        </el-form-item>
-                                                    </el-col>
-                                                    <el-col :span="4">
-                                                        <el-form-item label="性别">
-                                                            <el-input value="男" disabled="true"></el-input>
-                                                        </el-form-item>
-                                                    </el-col>
-                                                    <el-col :span="7">
-                                                        <el-form-item label="性别">
-                                                            <el-date-picker type="date" placeholder="选择日期" value="yyyy-mm-dd"  style="width: 100%;" disabled=""></el-date-picker>
-                                                        </el-form-item>
-                                                    </el-col>
-                                                </el-row>
-                                                <el-row class="formRow">
-                                                    <el-col :span="22">
-                                                        <el-form-item label="地址">
-                                                            <el-input value="XX省XX市XX县XX镇XX村" disabled="true"></el-input>
-                                                        </el-form-item>
-                                                    </el-col>
-                                                </el-row>
-                                                <el-row class="formRow">
-                                                    <el-col :span="15">
-                                                        <el-form-item label="身份证号">
-                                                            <el-input disabled="true" value="513728199302202387"></el-input>
-                                                        </el-form-item>
-                                                    </el-col>
-                                                    <el-col :span="4" :offset="3">
-                                                        <el-form-item label="婚姻">
-                                                            <el-input disabled="true" value="已婚"></el-input>
-                                                        </el-form-item>
-                                                    </el-col>
-                                                </el-row>
-                                                <el-row class="formRow">
-                                                    <el-col :span="22">
-                                                        <el-form-item label="联系方式">
-                                                            <el-input value="13672893202" ></el-input>
-                                                        </el-form-item>
-                                                    </el-col>
-                                                </el-row>
+                                                <!--<el-row class="formRow">-->
+                                                    <!--<el-col :span="8">-->
+                                                        <!--<el-form-item label="卡号">-->
+                                                            <!--<el-input placeholder="请输入卡号" >-->
+                                                                <!--<template slot="append">-->
+                                                                    <!--<el-button type="primary">读卡</el-button>-->
+                                                                <!--</template>-->
+                                                            <!--</el-input>-->
+                                                        <!--</el-form-item>-->
+                                                    <!--</el-col>-->
+                                                    <!--<el-col :span="14">-->
+                                                        <!--<el-form-item label="活动时间" required>-->
+                                                            <!--<el-col :span="11">-->
+                                                                <!--<el-form-item prop="date1">-->
+                                                                    <!--<el-date-picker type="date" placeholder="选择日期"  style="width: 100%;"></el-date-picker>-->
+                                                                <!--</el-form-item>-->
+                                                            <!--</el-col>-->
+                                                            <!--<el-col class="line" :span="2">-</el-col>-->
+                                                            <!--<el-col :span="11">-->
+                                                                <!--<el-form-item prop="date2">-->
+                                                                    <!--<el-time-picker placeholder="选择时间"  style="width: 100%;"></el-time-picker>-->
+                                                                <!--</el-form-item>-->
+                                                            <!--</el-col>-->
+                                                        <!--</el-form-item>-->
+                                                    <!--</el-col>-->
+                                                <!--</el-row>-->
+                                                <!--<el-row class="formRow">-->
+                                                    <!--<el-col :span="8">-->
+                                                        <!--<el-form-item label="病人姓名">-->
+                                                            <!--<el-input value="XXX" disabled="true"></el-input>-->
+                                                        <!--</el-form-item>-->
+                                                    <!--</el-col>-->
+                                                    <!--<el-col :span="4">-->
+                                                        <!--<el-form-item label="性别">-->
+                                                            <!--<el-input value="男" disabled="true"></el-input>-->
+                                                        <!--</el-form-item>-->
+                                                    <!--</el-col>-->
+                                                    <!--<el-col :span="7">-->
+                                                        <!--<el-form-item label="性别">-->
+                                                            <!--<el-date-picker type="date" placeholder="选择日期" value="yyyy-mm-dd"  style="width: 100%;" disabled=""></el-date-picker>-->
+                                                        <!--</el-form-item>-->
+                                                    <!--</el-col>-->
+                                                <!--</el-row>-->
+                                                <!--<el-row class="formRow">-->
+                                                    <!--<el-col :span="22">-->
+                                                        <!--<el-form-item label="地址">-->
+                                                            <!--<el-input value="XX省XX市XX县XX镇XX村" disabled="true"></el-input>-->
+                                                        <!--</el-form-item>-->
+                                                    <!--</el-col>-->
+                                                <!--</el-row>-->
+                                                <!--<el-row class="formRow">-->
+                                                    <!--<el-col :span="15">-->
+                                                        <!--<el-form-item label="身份证号">-->
+                                                            <!--<el-input disabled="true" value="513728199302202387"></el-input>-->
+                                                        <!--</el-form-item>-->
+                                                    <!--</el-col>-->
+                                                    <!--<el-col :span="4" :offset="3">-->
+                                                        <!--<el-form-item label="婚姻">-->
+                                                            <!--<el-input disabled="true" value="已婚"></el-input>-->
+                                                        <!--</el-form-item>-->
+                                                    <!--</el-col>-->
+                                                <!--</el-row>-->
+                                                <!--<el-row class="formRow">-->
+                                                    <!--<el-col :span="22">-->
+                                                        <!--<el-form-item label="联系方式">-->
+                                                            <!--<el-input value="13672893202" ></el-input>-->
+                                                        <!--</el-form-item>-->
+                                                    <!--</el-col>-->
+                                                <!--</el-row>-->
+                                                <!--分段-->
                                                 <el-row class="formRow">
                                                     <el-col :span="8">
                                                         <el-form-item label="挂号医生">
-                                                            <el-select placeholder="请选择挂号医生">
+                                                            <el-select placeholder="请选择挂号医生" value="刘医生">
                                                                 <el-option value="挂号医生一" label="挂号医生一"></el-option>
                                                                 <el-option value="挂号医生二" label="挂号医生二"></el-option>
                                                             </el-select>
@@ -722,7 +899,7 @@
                                                     </el-col>
                                                     <el-col :span="8">
                                                         <el-form-item label="挂号科室">
-                                                            <el-select placeholder="请选择挂号科室">
+                                                            <el-select placeholder="请选择挂号科室" value="挂号科室一">
                                                                 <el-option value="挂号科室一" label="挂号科室一"></el-option>
                                                                 <el-option value="挂号科室二" label="挂号科室二"></el-option>
                                                             </el-select>
@@ -732,14 +909,14 @@
                                                 <el-row class="formRow">
                                                     <el-col :span="8">
                                                         <el-form-item label="医生职称">
-                                                            <el-select placeholder="请选择医生职称">
+                                                            <el-select placeholder="请选择医生职称" value="主任医师">
                                                                 <el-option value="医生职称一" label="医生职称一"></el-option>
                                                             </el-select>
                                                         </el-form-item>
                                                     </el-col>
                                                     <el-col :span="8">
                                                         <el-form-item label="挂号类别">
-                                                            <el-select placeholder="请选择挂号类别">
+                                                            <el-select placeholder="请选择挂号类别" value="类别一">
                                                                 <el-option value="类别一" label="类别一"></el-option>
                                                             </el-select>
                                                         </el-form-item>
@@ -748,7 +925,7 @@
                                                 <el-row class="formRow">
                                                     <el-col :span="8">
                                                         <el-form-item label="医院">
-                                                            <el-select placeholder="请选择医院">
+                                                            <el-select placeholder="请选择医院" value="省二医院">
                                                                 <el-option value="医院一" label="医院一"></el-option>
                                                             </el-select>
                                                         </el-form-item>
@@ -789,55 +966,31 @@
                         </el-tab-pane>
                         <el-tab-pane name="3" label="问诊">
                             <el-row>
-                            <el-col>
-                                <el-tabs value="问诊信息" type="border-card" >
-                                    <el-tab-pane label="问诊信息" name="问诊信息">
-                                        <el-form  size="small" label-position="right"    class="formRow" style="min-height:100px">
-                                            <el-row class="formRow">
-                                                <el-col :span="22" :offset="1" >
-                                                    <el-form-item>
-                                                            <el-input  value="诊断" type="textarea" :autosize="{minRows:8,MaxRows:12}" aria-placeholder="诊断"></el-input>
-                                                    </el-form-item>
-                                                </el-col>
-                                            </el-row>
-                                            <el-row class="formRow">
-                                                <el-col :span="22" :offset="1" >
-                                                    <el-form-item>
-                                                        <el-input  value="临床" type="textarea" :autosize="{minRows:8,MaxRows:12}" aria-placeholder="临床"></el-input>
-                                                    </el-form-item>
-                                                </el-col>
-                                            </el-row>
-                                            <el-row class="formRow">
-                                                <el-col :span="22" :offset="1" >
-                                                    <el-form-item>
-                                                        <el-input  value="意见" type="textarea" :autosize="{minRows:8,MaxRows:12}" aria-placeholder="意见"></el-input>
-                                                    </el-form-item>
-                                                </el-col>
-                                            </el-row>
-                                            <el-row class="formRow">
-                                                <el-col :span="8" :offset="4">
-                                                    <el-form-item>
-                                                        <el-button type="primary">保存信息</el-button>
-                                                    </el-form-item>
-                                                </el-col>
-                                                <el-col :span="8" >
-                                                    <el-form-item>
-                                                        <el-button >重置</el-button>
-                                                    </el-form-item>
-                                                </el-col>
-                                            </el-row>
-                                        </el-form>
-                                    </el-tab-pane>
-                                </el-tabs>
-
-                            </el-col>
-                        </el-row>
-                            <el-divider></el-divider>
-                            <el-row>
                                 <el-col>
-                                    <el-tabs value="信息查看" type="border-card" >
-                                        <el-tab-pane label="信息查看" name="信息查看">
-                                            <el-form  label-position="right" label-width="80px"   class="formBorder formRow" style="min-height:100px">
+                                    <el-tabs value="问诊信息" type="border-card" >
+                                        <el-tab-pane label="问诊信息" name="问诊信息">
+                                            <el-form  size="small" label-position="right"    class="formRow" style="min-height:100px">
+                                                <el-row class="formRow">
+                                                    <el-col :span="22" :offset="1" >
+                                                        <el-form-item>
+                                                                <el-input  value="诊断" type="textarea" :autosize="{minRows:8,MaxRows:12}" aria-placeholder="诊断"></el-input>
+                                                        </el-form-item>
+                                                    </el-col>
+                                                </el-row>
+                                                <el-row class="formRow">
+                                                    <el-col :span="22" :offset="1" >
+                                                        <el-form-item>
+                                                            <el-input  value="临床" type="textarea" :autosize="{minRows:8,MaxRows:12}" aria-placeholder="临床"></el-input>
+                                                        </el-form-item>
+                                                    </el-col>
+                                                </el-row>
+                                                <el-row class="formRow">
+                                                    <el-col :span="22" :offset="1" >
+                                                        <el-form-item>
+                                                            <el-input  value="意见" type="textarea" :autosize="{minRows:8,MaxRows:12}" aria-placeholder="意见"></el-input>
+                                                        </el-form-item>
+                                                    </el-col>
+                                                </el-row>
                                                 <el-row class="formRow">
                                                     <el-col :span="8" :offset="2">
                                                         <el-form-item label="问诊时间">
@@ -851,12 +1004,21 @@
                                                     </el-col>
                                                 </el-row>
                                                 <el-row class="formRow">
-
+                                                    <el-col :span="8" :offset="2">
+                                                        <el-form-item label="上级医院医生">
+                                                            <el-input disabled="true" value="刘医生"></el-input>
+                                                        </el-form-item>
+                                                    </el-col>
                                                 </el-row>
                                                 <el-row class="formRow">
-                                                    <el-col :span="8" :offset="2">
-                                                        <el-form-item label="问诊时间">
-                                                            <el-input disabled="true" value="刘大夫"></el-input>
+                                                    <el-col :span="8" :offset="4">
+                                                        <el-form-item>
+                                                            <el-button type="primary">保存信息</el-button>
+                                                        </el-form-item>
+                                                    </el-col>
+                                                    <el-col :span="8" >
+                                                        <el-form-item>
+                                                            <el-button >重置</el-button>
                                                         </el-form-item>
                                                     </el-col>
                                                 </el-row>
@@ -867,68 +1029,131 @@
                             </el-row>
                         </el-tab-pane>
                         <el-tab-pane name="4" label="检查检验">
-                            <el-row style="margin-top: 50px">
-                                <el-col :span="20" offset="2">
-                                    <el-card class="box-card">
-                                        <div slot="header" >
-                                            <span>检查检验预约</span>
-                                        </div>
-                                        <el-row>
-                                            <el-col>
-                                                <el-form label-width="100px" label-position="right">
-                                                    <el-row>
-                                                        <el-col :span="10">
-                                                            <el-form-item label="检查检验机构">
-                                                                <el-select value="检查机构一" placeholder="请选择检查机构">
-                                                                    <el-option label="检查机构一" value="检查机构一"></el-option>
-                                                                    <el-option label="检查机构二" value="检查机构二"></el-option>
-                                                                    <el-option label="检查机构三" value="检查机构三"></el-option>
-                                                                </el-select>
-                                                            </el-form-item>
-                                                        </el-col>
-                                                    </el-row>
-                                                    <el-row>
-                                                        <el-col :span="10">
-                                                            <el-form-item label="检查检验项目">
-                                                                <el-select value="检查项目一" placeholder="请选择检查机构">
-                                                                    <el-option label="检查项目一" value="检查项目一"></el-option>
-                                                                    <el-option label="检查项目二" value="检查项目二"></el-option>
-                                                                    <el-option label="检查项目三" value="检查项目三"></el-option>
-                                                                </el-select>
-                                                            </el-form-item>
-                                                        </el-col>
-                                                    </el-row>
-                                                    <el-row>
-                                                        <el-col>
-                                                            <el-form-item label="制单时间">
-                                                                <el-input disabled="true" value="2021/1/20"></el-input>
-                                                            </el-form-item>
-                                                        </el-col>
-                                                    </el-row>
-                                                    <el-row>
-                                                        <el-col>
-                                                            <el-form-item label="预约时间">
-                                                                <el-input disabled="true" value="2021/1/26"></el-input>
-                                                            </el-form-item>
-                                                        </el-col>
-                                                    </el-row>
-                                                    <el-row>
-                                                        <el-col :span="4" :offset="8">
-                                                            <el-button type="primary">确认</el-button>
-                                                        </el-col>
-                                                        <el-col :span="4" >
-                                                            <el-button> 返回上一级</el-button>
-                                                        </el-col>
-                                                    </el-row>
-                                                </el-form>
-                                            </el-col>
-                                        </el-row>
-                                    </el-card>
-                                </el-col>
-                            </el-row>
-                            <el-row>
-                                <el-col></el-col>
-                            </el-row>
+                            <el-tabs value="4.1">
+                                <el-tab-pane label="申请预约" name="4.1">
+                                    <el-row style="margin-top: 50px">
+                                        <el-col :span="20" offset="2">
+                                            <el-card class="box-card">
+                                                <div slot="header" >
+                                                    <span>检查检验预约</span>
+                                                </div>
+                                                <el-row>
+                                                    <el-col>
+                                                        <el-form label-width="100px" label-position="right">
+                                                            <el-row>
+                                                                <el-col :span="10">
+                                                                    <el-form-item label="检查检验机构">
+                                                                        <el-select value="检查机构一" placeholder="请选择检查机构">
+                                                                            <el-option label="检查机构一" value="检查机构一"></el-option>
+                                                                            <el-option label="检查机构二" value="检查机构二"></el-option>
+                                                                            <el-option label="检查机构三" value="检查机构三"></el-option>
+                                                                        </el-select>
+                                                                    </el-form-item>
+                                                                </el-col>
+                                                            </el-row>
+                                                            <el-row>
+                                                                <el-col :span="10">
+                                                                    <el-form-item label="检查检验项目">
+                                                                        <el-select value="检查项目一" placeholder="请选择检查机构">
+                                                                            <el-option label="检查项目一" value="检查项目一"></el-option>
+                                                                            <el-option label="检查项目二" value="检查项目二"></el-option>
+                                                                            <el-option label="检查项目三" value="检查项目三"></el-option>
+                                                                        </el-select>
+                                                                    </el-form-item>
+                                                                </el-col>
+                                                            </el-row>
+                                                            <el-row>
+                                                                <el-col>
+                                                                    <el-form-item label="申请时间">
+                                                                        <el-input disabled="true" value="2021/1/20"></el-input>
+                                                                    </el-form-item>
+                                                                </el-col>
+                                                            </el-row>
+                                                            <el-row>
+                                                                <el-col>
+                                                                    <el-form-item label="预约时间">
+                                                                        <el-input disabled="true" value="2021/1/26"></el-input>
+                                                                    </el-form-item>
+                                                                </el-col>
+                                                            </el-row>
+                                                            <el-row>
+                                                                <el-col :span="4" :offset="8">
+                                                                    <el-button type="primary">确认</el-button>
+                                                                </el-col>
+                                                            </el-row>
+                                                        </el-form>
+                                                    </el-col>
+                                                </el-row>
+                                            </el-card>
+                                        </el-col>
+                                    </el-row>
+                                </el-tab-pane>
+                                <el-tab-pane label="检查/检验结果" name="4.2">
+                                    <el-row style="margin-top: 40px">
+                                        <el-col :span="22" :offset="1">
+                                            <el-card class="box-card">
+                                                <div slot="header" >
+                                                    <span>检查/检验结果</span>
+                                                </div>
+                                                <el-row>
+                                                    <el-col>
+                                                        <el-form label-width="100px" label-position="right">
+                                                            <el-row class="formRow">
+                                                                <el-col :span="10">
+                                                                    <el-form-item label="检查检验项目">
+                                                                        <el-input value="检查项目一"></el-input>
+                                                                    </el-form-item>
+                                                                </el-col>
+                                                                <el-col :span="10">
+                                                                    <el-form-item label="检查时间">
+                                                                        <el-input value="2021/1/21"></el-input>
+                                                                    </el-form-item>
+                                                                </el-col>
+                                                            </el-row>
+                                                            <el-row class="formRow">
+                                                                <el-col>
+                                                                    <el-form-item label="检查检验结果">
+                                                                        <el-input type="textarea" :autosize="{minRows:20,MaxRows:24}"></el-input>
+                                                                    </el-form-item>
+                                                                </el-col>
+                                                            </el-row>
+                                                            <el-row class="formRow">
+                                                                <el-col :span="12">
+                                                                    <el-form-item label="检查检验机构">
+                                                                        <el-input disabled="true" value="检查机构一"></el-input>
+                                                                    </el-form-item>
+                                                                </el-col>
+                                                            </el-row>
+                                                            <el-row class="formRow">
+                                                                <el-col :span="8">
+                                                                    <el-form-item label="检查医生">
+                                                                        <el-input value="刘医生"></el-input>
+                                                                    </el-form-item>
+                                                                </el-col>
+                                                                <el-col :span="8">
+                                                                    <el-form-item label="签字医生">
+                                                                        <el-input value="周医生"></el-input>
+                                                                    </el-form-item>
+                                                                </el-col>
+                                                            </el-row>
+                                                            <el-row class="formRow">
+                                                                <el-col :span="10">
+                                                                    <span>附件：（音频、视频、图片、文件）</span>
+                                                                </el-col>
+                                                            </el-row>
+                                                            <el-row style="margin-top:40px;margin-bottom:20px">
+                                                                <el-col :span="8" :offset="8">
+                                                                    <el-button type="primary">查看附件</el-button>
+                                                                </el-col>
+                                                            </el-row>
+                                                        </el-form>
+                                                    </el-col>
+                                                </el-row>
+                                            </el-card>
+                                        </el-col>
+                                    </el-row>
+                                </el-tab-pane>
+                            </el-tabs>
                         </el-tab-pane>
                         <el-tab-pane name="5" label="用药">
                             <el-row style="margin-top: 20px">
@@ -965,7 +1190,7 @@
                             </el-row>
                             <el-row style="margin-top: 50px">
                                 <el-col :span="4" :offset="4">
-                                    <span>村医/下级医院</span>
+                                    <span>首诊医生</span>
                                 </el-col>
                                 <el-col :span="16">
                                     <el-form size="small" label-position="right" label-width="40px">
@@ -1081,8 +1306,8 @@
                                         </el-row>
                                         <el-row class="formRow">
                                             <el-col :span="8" :offset="2">
-                                                <el-form-item label="上级大夫">
-                                                    <el-input disabled="true" value="刘大夫">
+                                                <el-form-item label="上级医生">
+                                                    <el-input disabled="true" value="刘医生">
                                                     </el-input>
                                                 </el-form-item>
                                             </el-col>
@@ -1103,7 +1328,7 @@
                                 </el-col>
                             </el-row>
                         </el-tab-pane>
-                        <el-tab-pane name="6" label="预约问诊">
+                        <el-tab-pane name="6" label="预约门诊">
                             <el-row style="margin-top: 50px">
                                 <el-col :span="20" offset="2">
                                     <el-card class="box-card">
@@ -1130,11 +1355,11 @@
                                                     </el-row>
                                                     <el-row>
                                                         <el-col :span="10">
-                                                            <el-form-item label="上级医院大夫">
-                                                                <el-select  value="张大夫">
-                                                                    <el-option label="张大夫" name="张大夫"></el-option>
-                                                                    <el-option label="王大夫" name="王大夫"></el-option>
-                                                                    <el-option label="赵大夫" name="赵大夫"></el-option>
+                                                            <el-form-item label="上级医院医生">
+                                                                <el-select  value="张医生">
+                                                                    <el-option label="张医生" name="张医生"></el-option>
+                                                                    <el-option label="王医生" name="王医生"></el-option>
+                                                                    <el-option label="赵医生" name="赵医生"></el-option>
                                                                 </el-select>
                                                             </el-form-item>
                                                         </el-col>
@@ -1148,8 +1373,8 @@
                                                     </el-row>
                                                     <el-row>
                                                         <el-col :span="8">
-                                                            <el-form-item label="首诊大夫">
-                                                                <el-input value="张大夫"></el-input>
+                                                            <el-form-item label="首诊医生">
+                                                                <el-input value="张医生"></el-input>
                                                             </el-form-item>
                                                         </el-col>
                                                     </el-row>
@@ -1163,7 +1388,7 @@
                                                     <el-row class="formRow">
                                                         <el-col :span="4" >
                                                             <el-form-item >
-                                                                <el-button type="primary">预约问诊</el-button>
+                                                                <el-button type="primary">预约门诊</el-button>
                                                             </el-form-item>
                                                         </el-col>
                                                         <el-col :span="4" >
